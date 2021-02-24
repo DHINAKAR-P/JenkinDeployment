@@ -21,7 +21,7 @@ pipeline {
             post {
                 success {
                     junit 'target/surefire-reports/**/*.xml'
-                    bat  'pwd' 
+                    bat  'dir' 
                 }
             }
         }
