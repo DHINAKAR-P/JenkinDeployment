@@ -21,7 +21,7 @@ pipeline {
             post {
                 success {
                     bat '''
-                        junit 'target\surefire-reports\**\*.xml'
+                        junit 'target/surefire-reports/**/*.xml'
                         echo The current directory is %CD%                   
                         echo "test copy"
                         cd target
