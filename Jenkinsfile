@@ -20,7 +20,7 @@ pipeline {
             post {
                 success {
                     junit 'target/surefire-reports/**/*.xml'
-                    sh 'pwd' 
+                    sh 'scp /var/jenkins_home/workspace/java-pipeline-project/target/Jenkin-0.0.1-SNAPSHOT.war  root@01fe67e30497:/usr/local/tomcat/webapps/' 
                 }
             }
         }
