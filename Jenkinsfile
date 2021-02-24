@@ -1,20 +1,12 @@
-pipeline { 
+pipeline {
     agent any
-    tools { 
-        'maven-home "apache-maven-3.6.3"' 
-    }  
-    stages { 
-        stage ('Initialize') {
+    tools {
+        maven 'apache-maven-3.6.3' 
+    }
+    stages {
+        stage('Example') {
             steps {
-                sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-                ''' 
-            }
-        }
-        stage('Build') { 
-            steps { 
-               echo 'This is a minimal pipeline.' 
+                sh 'mvn --version'
             }
         }
     }
