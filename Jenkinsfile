@@ -1,7 +1,7 @@
 pipeline { 
     agent any
     tools { 
-        maven-home 'apache-maven-3.6.3' 
+        maven-home  
     }  
     stages { 
         stage ('Initialize') {
