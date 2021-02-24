@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        mavenhome 'apache-maven-3.6.3' 
+        maven 'mavenhome' 
     }
     stages {
         stage('Example') {
