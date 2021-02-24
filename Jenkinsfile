@@ -20,8 +20,12 @@ pipeline {
             }
             post {
                 success {
-                    junit 'target/surefire-reports/**/*.xml'
-                    bat  'dir' 
+                    bat '''
+                        junit 'target/surefire-reports/**/*.xml'
+                        dir                   
+                        echo "test copy"
+                        copy "C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\TestJenkin\target\Jenkin-0.0.1-SNAPSHOT.war" "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\"
+                    '''
                 }
             }
         }
