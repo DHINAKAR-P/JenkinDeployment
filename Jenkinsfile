@@ -21,13 +21,13 @@ pipeline {
             post {
                 success {
                     bat '''
-                        junit 'target/surefire-reports/**/*.xml'
+                        junit 'target\surefire-reports\**\*.xml'
                         echo The current directory is %CD%                   
                         echo "test copy"
                         cd target
                         dir
                         cd ..
-                        copy "C:/Windows/system32/config/systemprofile/AppData/Local/Jenkins/.jenkins/workspace/pipeline-script-test/target/Jenkin-0.0.1-SNAPSHOT.war" "C:/Program Files/Apache Software Foundation/Tomcat 9.0/webapps/"
+                        copy "C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\pipeline-script-test\target\Jenkin-0.0.1-SNAPSHOT.war" "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\"
                     '''
                 }
             }
